@@ -19,7 +19,7 @@ jobs:
       #   if: steps.cache.outputs.cache-hit != 'true'
       #   run: npm ci
       - name: Load & cache dependencies
-        uses: ./github/actions/cached-deps
+        uses: ./.github/actions/cached-deps
       - name: Lint code
         run: npm run lint
   test:

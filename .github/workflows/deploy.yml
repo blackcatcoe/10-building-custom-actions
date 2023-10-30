@@ -72,7 +72,8 @@ jobs:
       - name: Output contents
         run: ls
       - name: Deploy site
-        uses: ./.github/actions/deploy-s3-javascript
+        # uses: ./.github/actions/deploy-s3-javascript
+        uses: ./.github/actions/deploy-s3-docker
         with:
           bucket: test-s3-bucket-name
           dist-folder: ./dist
